@@ -49,7 +49,6 @@ const App = () => {
   return (
     <div className="App w-screen p-4 px-8">
    
-
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
