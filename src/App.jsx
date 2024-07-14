@@ -48,7 +48,7 @@ const App = () => {
   // If it's a laptop, render the normal application
   return (
     <div className="App w-screen p-4 px-8">
-      <LaptopOnlyComponent />
+   
 
       <Header />
       <Routes>
