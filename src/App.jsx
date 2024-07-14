@@ -3,7 +3,6 @@ import { Route, Routes } from 'react-router-dom';
 import Header from './Components/Header';
 import Home from './Pages/Home';
 import CoinId from './Pages/CoinId';
-import LaptopOnlyComponent from './Components/LaptopOnlyComponent';
 import { FaSpinner } from 'react-icons/fa'; // Import the spinner icon
 
 const App = () => {
