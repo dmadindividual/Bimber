@@ -97,9 +97,9 @@ const Trending = () => {
         </div>
 
         <div className="flex flex-col gap-4 flex-grow w-full lg:w-96 bg-[#1f2233] p-6 rounded-lg shadow-lg">
-          <div className="flex justify-between items-center border-b border-gray-700 pb-2 mb-2">
-          <h3 className="text-2xl font-medium italic">Overview</h3>
-          <h3 className="text-sm text-blue-400 cursor-pointer"><FaArrowRight/></h3>
+        <div className="flex justify-between bg-inherit items-center border-b border-gray-700 pb-2 mb-2">
+            <h3 className="text-2xl bg-inherit  font-medium italic">Overview</h3>
+            <h3 className="text-sm bg-inherit text-blue-400 cursor-pointer"><FaArrowRight/></h3>
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-between flex-1">
             <div className="flex flex-col gap-4 sm:gap-8 w-full">
