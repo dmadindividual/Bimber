@@ -15,7 +15,7 @@ const CoinProvider = ({ children }) => {
         try {
             const coinResponse = await fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=${Currency.name}`, {
                 headers: {
-                    'x-cg-demo-api-key': 'CG-LF88jcENWAxuCVitZkz19XEt'
+                    'x-cg-demo-api-key': 'CG-EFfUfUrwojyd6RFTSZpuBmwc'
                 }
             });
             const coinData = await coinResponse.json();
@@ -23,7 +23,7 @@ const CoinProvider = ({ children }) => {
 
             const trendingResponse = await fetch('https://api.coingecko.com/api/v3/search/trending', {
                 headers: {
-                    'x-cg-demo-api-key': 'CG-LF88jcENWAxuCVitZkz19XEt'
+                    'x-cg-demo-api-key': 'CG-EFfUfUrwojyd6RFTSZpuBmwc'
                 }
             });
             const trendingData = await trendingResponse.json();
@@ -31,7 +31,7 @@ const CoinProvider = ({ children }) => {
 
             const globalResponse = await fetch('https://api.coingecko.com/api/v3/global', {
                 headers: {
-                    'x-cg-demo-api-key': 'CG-LF88jcENWAxuCVitZkz19XEt'
+                    'x-cg-demo-api-key': 'CG-EFfUfUrwojyd6RFTSZpuBmwc'
                 }
             });
             const globalData = await globalResponse.json();

@@ -14,7 +14,7 @@ const CoinId = () => {
   const fetchHistoricalData = async () => {
     const options = {
       method: 'GET',
-      headers: { accept: 'application/json', 'x-cg-demo-api-key': 'CG-LF88jcENWAxuCVitZkz19XEt' }
+      headers: { accept: 'application/json', 'x-cg-demo-api-key': 'CG-EFfUfUrwojyd6RFTSZpuBmwc' }
     };
 
     try {
@@ -40,7 +40,7 @@ const CoinId = () => {
       method: "GET",
       headers: {
         accept: "application/json",
-        "x-cg-demo-api-key": "CG-LF88jcENWAxuCVitZkz19XEt",
+        "x-cg-demo-api-key": "CG-EFfUfUrwojyd6RFTSZpuBmwc",
       },
     };
 
