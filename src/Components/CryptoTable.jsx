@@ -24,7 +24,7 @@ const CryptoTable = ({ coinsPerPage }) => {
   };
 
   return (
-    <div className="container mx-auto p-6">
+    <div className="w-full mx-auto p-6">
       <div className="overflow-x-auto">
         <table className="w-full bg-gray-900 shadow-md rounded-lg text-white">
           <thead className="bg-gray-800">
