@@ -7,6 +7,7 @@ const Trending = () => {
   const { TrendingCoins, Currency, GlobalMarketData } = useContext(CoinContext);
   const [displayTrendingCoins1, setDisplayTrendingCoins1] = useState([]);
   const [displayTrendingCoins2, setDisplayTrendingCoins2] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const Text = "Today's Cryptocurrency Prices by Market Cap";
 
@@ -24,6 +25,8 @@ const Trending = () => {
 
       const coins2 = getRandomTrendingCoins(coins1.map((coin) => coin.item.id));
       setDisplayTrendingCoins2(coins2);
+
+      setLoading(false);
     }
 
     const interval = setInterval(() => {
@@ -57,6 +60,10 @@ const Trending = () => {
       maximumFractionDigits: 0,
     }).format(number);
   };
+
+  if (loading) {
+    return <div className="container mx-auto mt-6 text-white px-4 sm:px-6 lg:px-8">Loading...</div>;
+  }
 
   return (
     <div className="container mx-auto mt-6 text-white px-4 sm:px-6 lg:px-8">

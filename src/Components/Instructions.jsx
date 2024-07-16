@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Instructions = () => {
   const [step, setStep] = useState(0);
@@ -12,12 +12,22 @@ const Instructions = () => {
     "Ready to get started? Click OK to begin your journey!"
   ];
 
+  useEffect(() => {
+    // Check if instructions have been shown in this session
+    const instructionsShown = sessionStorage.getItem("instructionsShown");
+    if (instructionsShown) {
+      setStep(-1); // Skip instructions if already shown
+    }
+  }, []);
+
   const handleNextStep = () => {
     if (step < instructions.length - 1) {
       setStep(step + 1);
     } else {
       // Close the instructions UI when the last step is reached
       setStep(-1);
+      // Mark instructions as shown in this session
+      sessionStorage.setItem("instructionsShown", "true");
     }
   };
 
@@ -25,7 +35,7 @@ const Instructions = () => {
     step !== -1 && (
       <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
         <div className="bg-black rounded-lg p-8 max-w-md mx-auto text-center shadow-xl">
-          <h2 className="text-4xl text-white bg-inherit font-bold text-gray-800 mb-4">Welcome to Bimber !</h2>
+          <h2 className="text-4xl text-white bg-inherit font-bold text-gray-800 mb-4">Welcome to Bimber!</h2>
           <p className="bg-inherit text-lg text-white mb-6">{instructions[step]}</p>
           <button
             onClick={handleNextStep}
